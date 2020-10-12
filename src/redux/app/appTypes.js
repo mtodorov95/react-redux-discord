@@ -1,0 +1,2 @@
+export const SET_CHANNEL_ID = "SET_CHANNEL_ID";
+export const SET_CHANNEL_NAME = "SET_CHANNEL_NAME";
