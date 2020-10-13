@@ -4,7 +4,11 @@ import { USER_LOGIN, USER_LOGOUT } from "./userTypes"
 export const userLogin = (user) => {
     return {
         type: USER_LOGIN,
-        payload: user
+        payload: {
+            displayName :user.displayName,
+            photoUrl: user.photoURL,
+            uid: user.uid
+        }
     }
 }
 

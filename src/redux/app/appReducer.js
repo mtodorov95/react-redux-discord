@@ -1,4 +1,4 @@
-import { SET_CHANNEL_NAME, SET_CHANNEL_ID } from "./appTypes";
+import { SET_CHANNEL_INFO } from "./appTypes";
 
 const initialState = {
     channelId: null,
@@ -8,15 +8,11 @@ const initialState = {
   
   const appReducer = (state = initialState, action) => {
     switch(action.type){
-        case SET_CHANNEL_ID:
+        case SET_CHANNEL_INFO:
             return {
                 ...state,
-                channelId: action.payload
-            }
-            case SET_CHANNEL_NAME:
-            return {
-                ...state,
-                channelName: action.payload
+                channelId: action.payload.id,
+                channelName: action.payload.channelName
             }
       default:
         return state;
